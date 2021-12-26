@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TodoProvider } from './context/todoContext';
+import WeatherWatch from './pages/weather-watch';
+// import { TodoProvider } from './context/todoContext';
 // import App from './app';
-import Todo from './pages/Todo';
+// import Todo from './pages/Todo';
 import './root.css';
 // import UserGreet from './Input';
 
@@ -34,8 +35,6 @@ import './root.css';
 // Class Component
 
 ReactDOM.render(
-  <TodoProvider>
-    <Todo />
-  </TodoProvider>,
+  <WeatherWatch></WeatherWatch>,
   document.getElementById('root'),
 );

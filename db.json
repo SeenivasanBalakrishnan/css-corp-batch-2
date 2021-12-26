@@ -1,46 +1,64 @@
 {
-  "todo-list": [
+  "weather-report": [
     {
-      "text": "adfasdf",
-      "isDone": true,
-      "timeStamp": "12-20-21 12:04",
-      "id": 1
+      "id": 1,
+      "name": "Chennai",
+      "location": "String",     
+      "conditions": "Scattered Clouds",
+      "icon": "public/images/weather_icon_cloud_slight_rain.svg" ,
+      "temp": 29,
+      "temp_max": 29,
+      "temp_min": 28,
+      "feels_like": 30,
+      "wind_speed": 3.1,
+      "wind_direction": 220,
+      "pressure": 1016,
+      "humidity": 54
     },
     {
-      "text": "asdfadsf",
-      "isDone": true,
-      "timeStamp": "12-20-21 12:04",
-      "id": 2
+      "id": 2,
+      "name": "Chengalpattu",
+      "location": "String",     
+      "conditions": "Scattered Clouds",
+      "icon": "public/images/weather_icon_partly_cloudy.svg" ,
+      "temp": 29,
+      "temp_max": 29,
+      "temp_min": 28,
+      "feels_like": 30,
+      "wind_speed": 3.1,
+      "wind_direction": 220,
+      "pressure": 1016,
+      "humidity": 54
     },
     {
-      "text": "aasfdasfs",
-      "isDone": true,
-      "timeStamp": "12-20-21 12:04",
-      "id": 3
+      "id": 3,
+      "name": "Chethupattu",
+      "location": "String",     
+      "conditions": "Scattered Clouds",
+      "icon": "public/images/weather_icon_full_sun.svg" ,
+      "temp": 29,
+      "temp_max": 29,
+      "temp_min": 28,
+      "feels_like": 30,
+      "wind_speed": 3.1,
+      "wind_direction": 220,
+      "pressure": 1016,
+      "humidity": 54
     },
     {
-      "text": "asdfdas",
-      "isDone": false,
-      "timeStamp": "12-20-21 01:53",
-      "id": 4
-    },
-    {
-      "text": "asdfdasf",
-      "isDone": false,
-      "timeStamp": "12-20-21 01:54",
-      "id": 5
-    },
-    {
-      "text": "asfdsaf",
-      "isDone": false,
-      "timeStamp": "12-20-21 01:54",
-      "id": 6
-    },
-    {
-      "text": "asdfdasf",
-      "isDone": false,
-      "timeStamp": "12-20-21 01:55",
-      "id": 7
+      "id": 4,
+      "name": "Bengalore",
+      "location": "String",     
+      "conditions": "Scattered Clouds",
+      "icon": "public/images/weather_icon_partly_cloudy.svg" ,
+      "temp": 29,
+      "temp_max": 29,
+      "temp_min": 28,
+      "feels_like": 30,
+      "wind_speed": 3.1,
+      "wind_direction": 220,
+      "pressure": 1016,
+      "humidity": 54
     }
   ]
 }
