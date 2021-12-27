@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-const SearchResults = ({ cities, setCity, invalidCity }) => {
+const SearchResults = ({ cities, getWeather, invalidCity }) => {
   return (
     <div className={cn("absolute w-full top-full flex mt-1 mr-1 bg-white p-8 rounded-md shadow-xl z-10 capitalize", {
       "hidden": (!invalidCity && !cities.length)
@@ -13,7 +13,7 @@ const SearchResults = ({ cities, setCity, invalidCity }) => {
         </h3>
         : cities?.map(city => {
           return (
-            <button key={city.id} type="button" onClick={() => setCity(city.id)} className="px-5 py-1 mr-2 text-sm font-semibold tracking-wider bg-gradient-to-r from-rose-500 to-fuchsia-800 text-white rounded-full">
+            <button key={city.id} type="button" onClick={() => getWeather(city.id)} className="px-5 py-1 mr-2 text-sm font-semibold tracking-wider bg-gradient-to-r from-rose-500 to-fuchsia-800 text-white rounded-full">
               {city.name}
             </button>
           )
@@ -39,7 +39,7 @@ SearchResults.propTypes = {
       humidity: PropTypes.number.isRequired,
     })
   ),
-  setCity: PropTypes.func.isRequired,
+  getWeather: PropTypes.func.isRequired,
   invalidCity: PropTypes.string
 }
 

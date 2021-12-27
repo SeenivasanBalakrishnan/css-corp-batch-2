@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WeatherWatch from './pages/weather-watch';
+import WeatherWatch from './components/app';
 // import { TodoProvider } from './context/todoContext';
 // import App from './app';
 // import Todo from './pages/Todo';

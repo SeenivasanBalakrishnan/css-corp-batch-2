@@ -16,7 +16,7 @@ class WeatherWatch extends PureComponent {
   baseURL = 'http://localhost:3000/weather-reports';
   inputText = createRef();
 
-  getCitiesByKeyword = async (keyword) => {
+  searchLocations = async (keyword) => {
     if (!keyword.length) {
       this.setState({ cities: [], invalidCity: null })
       return
@@ -48,10 +48,10 @@ class WeatherWatch extends PureComponent {
   }
 
   searchCities = _.debounce(() => {
-    this.getCitiesByKeyword(this.inputText?.current?.value);
+    this.searchLocations(this.inputText?.current?.value);
   }, 500);
 
-  setCurrentCity = async (cityId) => {
+  getWeather = async (cityId) => {
     const { currentCity } = this.state;
     if (currentCity?.id === cityId) {
       this.setState({ currentCity, cities: [] }, () => { this.inputText.current.value = '' });
@@ -78,7 +78,7 @@ class WeatherWatch extends PureComponent {
 
   componentDidMount() {
     // setting Bangalore as default city
-    this.setCurrentCity(4);
+    this.getWeather(4);
   }
 
   render() {
@@ -99,7 +99,7 @@ class WeatherWatch extends PureComponent {
               </Suspense>
             </div>
             <Suspense fallback={''}>
-              <SearchResults cities={cities} invalidCity={invalidCity} setCity={this.setCurrentCity} />
+              <SearchResults cities={cities} invalidCity={invalidCity} getWeather={this.getWeather} />
             </Suspense>
           </div>
           <div className="w-full bg-white mt-2 p-5 rounded-md relative shadow">
